@@ -1,352 +1,350 @@
 /* Global */
 
 :root {
-    --color-darkblue: #363f5f;
-    --green: #49aa26;
-    --dark-green: #2d4a22;
-    --light-green: #3dd705;
-    --red: #e92929;
+  --color-darkblue: #363f5f;
+  --green: #49aa26;
+  --dark-green: #2d4a22;
+  --light-green: #3dd705;
+  --red: #e92929;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 93.75%; /* 15px */
+  font-size: 93.75%; /* 15px */
 }
 
 body {
-    background: #f0f2f5;
-    font-family: "Poppins", sans-serif;
+  background: #f0f2f5;
+  font-family: "Poppins", sans-serif;
 }
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .container {
-    width: min(90vw, 800px);
-    margin: auto;
+  width: min(90vw, 800px);
+  margin: auto;
 }
 
 /* Titles */
 
 h2 {
-    margin-top: 3.2rem;
-    margin-bottom: 0.8rem;
-    color: var(--color-darkblue);
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--color-darkblue);
 
-    font-weight: normal;
+  font-weight: normal;
 }
 
 /* Links & Buttons */
 
 a {
-    color: var(--green);
-    text-decoration: none;
+  color: var(--green);
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--light-green);
+  color: var(--light-green);
 }
 
 button {
-    width: 100%;
-    height: 50px;
+  width: 100%;
+  height: 50px;
 
-    border: none;
+  border: none;
 
-    color: white;
-    background: var(--green);
+  color: white;
+  background: var(--green);
 
-    padding: 0;
+  padding: 0;
 
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    outline: none;
+  outline: none;
 }
 
 button:hover {
-    background: var(--light-green);
+  background: var(--light-green);
 }
 
 .button.new {
-    display: inline-block;
-    margin-bottom: 0.8rem;
+  display: inline-block;
+  margin-bottom: 0.8rem;
 }
 
 .button.cancel {
-    color: var(--red);
-    border: 2px solid var(--red);
-    border-radius: 0.5rem;
+  color: var(--red);
+  border: 2px solid var(--red);
+  border-radius: 0.5rem;
 
-    height: 50px;
+  height: 50px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .button.cancel:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Header */
 
 header {
-    background: var(--dark-green);
-    padding: 2rem 0 12rem;
-    text-align: center;
+  background: var(--dark-green);
+  padding: 2rem 0 12rem;
+  text-align: center;
 }
 
 #logo {
-    color: #fff;
-    font-weight: 100;
+  color: #fff;
+  font-weight: 100;
 }
 
 /* Balance */
 
 #balance {
-    margin-top: -7rem;
+  margin-top: -7rem;
 }
 
 #balance h2 {
-    color: white;
-    margin-top: 0;
+  color: white;
+  margin-top: 0;
 }
 
 /* Cards */
 
 .card {
-    background: white;
-    padding: 1.5rem 2rem;
-    border-radius: 0.5rem;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
 
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 
-    color: var(--color-darkblue);
+  color: var(--color-darkblue);
 }
 
 .card h3 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    font-weight: normal;
-    font-size: 1rem;
+  font-weight: normal;
+  font-size: 1rem;
 }
 
 .card p {
-    font-size: 2rem;
-    line-height: 3rem;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 .card.green {
-    background: var(--green);
-    color: white;
+  background: var(--green);
+  color: white;
 }
 
 .new-date {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .actualDate {
-    border: none;
-    border-radius: 0.8rem;
-    outline: none;
+  border: none;
+  border-radius: 0.8rem;
+  outline: none;
 
-    padding: 0.8rem;
-    width: auto;
+  padding: 0.8rem;
+  width: auto;
 
-    font-family: Poppins;
-    font-size: 1rem;
-    color: #969cb3;
+  font-family: Poppins;
+  font-size: 1rem;
+  color: #969cb3;
 }
 
 .actualDate:hover {
-    color: var(--color-darkblue);
-    cursor: pointer;
-    opacity: 1;
+  color: var(--color-darkblue);
+  cursor: pointer;
+  opacity: 1;
 }
 
 /* Table */
 
 #data-table {
-    width: 100%;
-    border-spacing: 0 0.5rem;
-    color: #969cb3;
+  width: 100%;
+  border-spacing: 0 0.5rem;
+  color: #969cb3;
 }
 
 table thead tr th:first-child,
 table tbody tr td:first-child {
-    border-radius: 0.5rem 0 0 0.5rem;
+  border-radius: 0.5rem 0 0 0.5rem;
 }
 table thead tr th:last-child,
 table tbody tr td:last-child {
-    border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 table thead th {
-    background: white;
+  background: white;
 
-    font-weight: normal;
-    padding: 1rem 2rem;
+  font-weight: normal;
+  padding: 1rem 2rem;
 
-    text-align: left;
+  text-align: left;
 }
 
 table tbody tr {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 table tbody tr:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 table tbody td {
-    background: white;
+  background: white;
 
-    padding: 1rem 2rem;
-    font-weight: normal;
+  padding: 1rem 2rem;
+  font-weight: normal;
 
-    text-align: left;
+  text-align: left;
 }
 
 td.description {
-    color: var(--color-darkblue);
+  color: var(--color-darkblue);
 }
 
 td.income {
-    color: #12a454;
+  color: #12a454;
 }
 
 td.expense {
-    color: var(--red);
+  color: var(--red);
 }
 
 /* Modal */
 
 .modal-overlay {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 
-    position: fixed;
-    top: 0;
+  position: fixed;
+  top: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal {
-    background: #f0f2f5;
-    padding: 2.4rem;
+  background: #f0f2f5;
+  padding: 2.4rem;
 }
 
 /* Form */
 
 #form {
-    max-width: 500px;
+  max-width: 500px;
 }
 
 #form h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 #form input {
-    border: none;
-    border-radius: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
 
-    padding: 0.8rem;
-    width: 100%;
+  padding: 0.8rem;
+  width: 100%;
 
-    opacity: 0.7;
-    color: var(--color-darkblue);
+  opacity: 0.7;
+  color: var(--color-darkblue);
 
-    outline-color: var(--color-darkblue);
+  outline-color: var(--color-darkblue);
 }
 
 #form input:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .input-group {
-    margin-top: 0.8rem;
+  margin-top: 0.8rem;
 }
 
 .input-group small {
-    opacity: 0.4;
+  opacity: 0.4;
 }
 
 .input-group #date {
-    opacity: 0.7;
-    color: var(--color-darkblue);
+  opacity: 0.7;
+  color: var(--color-darkblue);
 }
 
 .input-group #date:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .input-group.actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .input-group.actions .button,
 .input-group.actions button {
-    width: 48%;
+  width: 48%;
 }
-
-
 
 /* Footer */
 
 footer {
-    text-align: center;
-    padding: 4rem 0 2rem;
-    color: var(--color-darkblue);
-    opacity: 0.6;
+  text-align: center;
+  padding: 4rem 0 2rem;
+  color: var(--color-darkblue);
+  opacity: 0.6;
 }
 
 /* Responsive */
 
 @media (min-width: 800px) {
-    html {
-        font-size: 87.5%;
-    }
+  html {
+    font-size: 87.5%;
+  }
 
-    #balance {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
+  #balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
