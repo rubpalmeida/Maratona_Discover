@@ -156,6 +156,10 @@ header {
   line-height: 3rem;
 }
 
+.card #expenseDisplay {
+  color: var(--red)
+}
+
 .card.green {
   background: var(--green);
   color: white;
@@ -291,7 +295,7 @@ td.expense {
   opacity: 0.7;
   color: var(--color-darkblue);
 
-  outline-color: var(--color-darkblue);
+  outline-color: var(--green);
 }
 
 #form input:hover {
