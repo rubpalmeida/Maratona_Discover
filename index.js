@@ -1,23 +1,13 @@
-const txtDate = document.querySelector("#month")
-const btnCancel = document.querySelector(".button.cancel")
 
 // Load a intial date
-window.addEventListener("load", event => {
+// Form.addEventListener("load", event => {
+//   const date = new Date();
+//   const month = date.getMonth() < 10 ? (date.getMonth() + 1) : date.getMonth();
+//   const year = date.getFullYear();
 
-  const date = new Date();
-  const month = date.getMonth() < 10 ? (date.getMonth() + 1) : date.getMonth();
-  const year = date.getFullYear();
+//   const txtDate = `${year}-0${month}`
 
-  txtDate.value = `${year}-0${month}`
-})
-
-
-btnCancel.addEventListener("click", event => {
-  Form.clearFields()
-  Modal.toggle()
-})
-
-
+// })
 
 const Modal = {
   toggle() {

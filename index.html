@@ -55,8 +55,6 @@
 
       <div class="new-date">
         <a href="#" onclick="Modal.toggle()" class="button new">+ Nova Transação</a>
-        <label class="sr-only" for="month">Data</label>
-        <input type="month" id="month" name="month" class="actualDate">
       </div>
 
       <table id="data-table">
@@ -84,7 +82,7 @@
           </div>
           <div class="input-group">
             <label class="sr-only" for="description">Valor</label>
-            <input type="number" id="amount" name="amount" step="any" placeholder="0,00" />
+            <input type="number" id="amount" name="amount" step="0.01" placeholder="0,00" />
 
             <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas
               decimais</small>
@@ -96,7 +94,7 @@
           </div>
 
           <div class="input-group actions">
-            <a href="#" class="button cancel">Cancelar</a>
+            <a href="#" onclick="Form.clearFields(), Modal.toggle()" class="button cancel">Cancelar</a>
             <button class="button save" type="submit">Salvar</button>
           </div>
         </form>
@@ -105,7 +103,7 @@
   </div>
 
   <footer>
-    <p>dev.finance$</p>
+    <p>dev.finance$ - By Rubens Almeida</p>
   </footer>
 
   <script src="index.js"></script>

@@ -54,7 +54,7 @@ h2 {
 
 a {
   color: var(--green);
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 a:hover {
@@ -285,7 +285,7 @@ td.expense {
   margin-top: 0;
 }
 
-#form input {
+input {
   border: none;
   border-radius: 0.5rem;
 
@@ -337,6 +337,9 @@ footer {
   padding: 4rem 0 2rem;
   color: var(--color-darkblue);
   opacity: 0.6;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Responsive */
