@@ -10,7 +10,7 @@ const Storage = {
   },
   set(transactions) {
     localStorage.setItem("dev.finances:transactions",
-    JSON.stringify(transactions))
+      JSON.stringify(transactions))
   }
 }
 
@@ -38,8 +38,6 @@ const Transaction = {
         income += transaction.amount
       }
     })
-
-
     return income
   },
 
@@ -57,15 +55,12 @@ const Transaction = {
 
   total() {
     // Entradas menos as Saidas
-
     return Transaction.incomes() + Transaction.expenses()
-
   }
 }
 
 const DOM = {
   transactionsContainer: document.querySelector('#data-table tbody'),
-
 
   addTransaction(transaction, index) {
     const tr = document.createElement('tr')
@@ -98,7 +93,7 @@ const DOM = {
       .innerHTML = Utils.formatCurrency(Transaction.expenses())
     document
       .getElementById('totalDisplay')
-      .innerHTML = Utils.formatCurrency(Transaction.total())
+      .innerHTML = Utils.formatCurrencyTotal(Transaction.total())
   },
 
   clearTransactions() {
@@ -121,10 +116,27 @@ const Utils = {
 
   },
 
-  formatAmount(value) {
-    value = Number(value.replace(/\,\./g, "")) * 100
+  formatCurrencyTotal(value) {
+    const signal = value >= 0 ? "" : "-"
 
-    return value
+    value = String(value).replace(/\D/g, "")
+
+    value = Number(value) / 100
+
+    value = value.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL"
+    })
+
+
+    return `${signal} ${value}`
+  },
+
+  formatAmount(value) {
+
+    value = value * 100
+
+    return Math.round(value)
   },
 
   formatDate(date) {
@@ -218,5 +230,3 @@ const App = {
 }
 
 App.init()
-
-

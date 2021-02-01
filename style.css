@@ -139,7 +139,6 @@ header {
 
   margin-bottom: 2rem;
 
-  color: var(--color-darkblue);
 }
 
 .card h3 {
@@ -149,6 +148,7 @@ header {
 
   font-weight: normal;
   font-size: 1rem;
+  color: var(--color-darkblue);
 }
 
 .card p {
@@ -158,6 +158,10 @@ header {
 
 .card #expenseDisplay {
   color: var(--red)
+}
+
+.card #incomeDisplay {
+  color: var(--green)
 }
 
 .card.green {
