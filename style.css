@@ -268,6 +268,7 @@ td.expense {
 .modal-overlay.active {
   opacity: 1;
   visibility: visible;
+  z-index: 10;
 }
 
 .modal {
@@ -337,9 +338,6 @@ footer {
   padding: 4rem 0 2rem;
   color: var(--color-darkblue);
   opacity: 0.6;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 /* Responsive */

@@ -1,14 +1,3 @@
-
-// Load a intial date
-// Form.addEventListener("load", event => {
-//   const date = new Date();
-//   const month = date.getMonth() < 10 ? (date.getMonth() + 1) : date.getMonth();
-//   const year = date.getFullYear();
-
-//   const txtDate = `${year}-0${month}`
-
-// })
-
 const Modal = {
   toggle() {
     document.querySelector('.modal-overlay').classList.toggle('active')
@@ -219,6 +208,7 @@ const App = {
     DOM.updateBalance()
 
     Storage.set(Transaction.all)
+
   },
 
   reload() {
