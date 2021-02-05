@@ -212,11 +212,8 @@ header {
   color: var(--white);
 }
 
-.new-date {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+h3 .svg {
+  stroke: var(--white);
 }
 
 /* Table */
@@ -278,6 +275,10 @@ td.income {
 
 td.expense {
   color: var(--red);
+}
+
+td img:hover {
+  cursor: pointer;
 }
 
 /* Modal */

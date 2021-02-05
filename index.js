@@ -1,4 +1,5 @@
 const switchThemeButton = document.querySelector(".checkbox");
+const imgGit = document.querySelector(".github-icon");
 
 switchThemeButton.addEventListener("click", event => {
   switchTheme()
@@ -8,8 +9,10 @@ let COLOR_THEME = window.matchMedia("(prefers-color-scheme: light)").matches ? '
 
 if (COLOR_THEME === "dark") {
   switchThemeButton.checked = true
+  imgGit.src = "assets/GitHub-Mark/GitHub-Mark-Light-32px.png"
 } else {
   switchThemeButton.checked = false
+  imgGit.src = "assets/GitHub-Mark/GitHub-Mark-32px.png"
 }
 
 function switchTheme() {
@@ -17,7 +20,13 @@ function switchTheme() {
 
   COLOR_THEME = currentTheme === 'light' ? 'dark' : 'light'
 
+  if (currentTheme === "dark") {
+    imgGit.src = "assets/GitHub-Mark/GitHub-Mark-32px.png"
+  } else {
+    imgGit.src = "assets/GitHub-Mark/GitHub-Mark-Light-32px.png"
+  }
 
+  console.log(imgGit.src)
   const rules = window.document.styleSheets[0].cssRules
 
   for (i = 0; i < rules.length; i++) {
@@ -33,7 +42,6 @@ function switchTheme() {
         "(prefers-color-scheme: " + currentTheme + ")",
         "(prefers-color-scheme: " + COLOR_THEME + ")"
       )
-    console.log(item)
     media.mediaText = item
   }
 }
