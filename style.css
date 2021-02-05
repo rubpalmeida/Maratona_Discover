@@ -212,7 +212,7 @@ header {
   color: var(--white);
 }
 
-h3 .svg {
+h3 path{
   stroke: var(--white);
 }
 

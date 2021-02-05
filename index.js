@@ -26,7 +26,6 @@ function switchTheme() {
     imgGit.src = "assets/GitHub-Mark/GitHub-Mark-Light-32px.png"
   }
 
-  console.log(imgGit.src)
   const rules = window.document.styleSheets[0].cssRules
 
   for (i = 0; i < rules.length; i++) {
