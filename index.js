@@ -1,3 +1,43 @@
+const switchThemeButton = document.querySelector(".checkbox");
+
+switchThemeButton.addEventListener("click", event => {
+  switchTheme()
+})
+
+let COLOR_THEME = window.matchMedia("(prefers-color-scheme: light)").matches ? 'light' : 'dark';
+
+if (COLOR_THEME === "dark") {
+  switchThemeButton.checked = true
+} else {
+  switchThemeButton.checked = false
+}
+
+function switchTheme() {
+  let currentTheme = COLOR_THEME
+
+  COLOR_THEME = currentTheme === 'light' ? 'dark' : 'light'
+
+
+  const rules = window.document.styleSheets[0].cssRules
+
+  for (i = 0; i < rules.length; i++) {
+    media = rules[i].media
+
+    if (media == undefined) {
+      continue
+    }
+
+    let item = media
+      .mediaText
+      .replace(
+        "(prefers-color-scheme: " + currentTheme + ")",
+        "(prefers-color-scheme: " + COLOR_THEME + ")"
+      )
+    console.log(item)
+    media.mediaText = item
+  }
+}
+
 const Modal = {
   toggle() {
     document.querySelector('.modal-overlay').classList.toggle('active')

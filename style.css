@@ -1,11 +1,14 @@
 /* Global */
 
 :root {
-  --color-darkblue: #363f5f;
+  --background: #f0f2f5;
+  --header-background: #2d4a22;
+  --font-color: #363f5f;
   --green: #49aa26;
-  --dark-green: #2d4a22;
   --light-green: #3dd705;
   --red: #e92929;
+  --white: #fff;
+  --light-black: #333;
 }
 
 * {
@@ -19,7 +22,7 @@ html {
 }
 
 body {
-  background: #f0f2f5;
+  background: var(--background);
   font-family: "Poppins", sans-serif;
 }
 
@@ -40,12 +43,53 @@ body {
   margin: auto;
 }
 
+/* Them Switch */
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.check {
+  position: absolute;
+  right: 20px;
+  top: 32.5px;
+  width: 40px;
+  height: 20px;
+  background: var(--light-green);
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.2s;
+}
+
+input[type="checkbox"]:checked ~ .check {
+  background: var(--light-black);
+}
+
+.check::before {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 2px;
+  background: var(--white);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+input[type="checkbox"]:checked ~ .check::before {
+  transform: translateX(20px);
+  background: #3dd705;
+}
+
 /* Titles */
 
 h2 {
   margin-top: 3.2rem;
   margin-bottom: 0.8rem;
-  color: var(--color-darkblue);
+  color: var(--font-color);
 
   font-weight: normal;
 }
@@ -54,7 +98,7 @@ h2 {
 
 a {
   color: var(--green);
-  /* text-decoration: none; */
+  text-decoration: none;
 }
 
 a:hover {
@@ -67,7 +111,7 @@ button {
 
   border: none;
 
-  color: white;
+  color: var(--white);
   background: var(--green);
 
   padding: 0;
@@ -109,13 +153,13 @@ button:hover {
 /* Header */
 
 header {
-  background: var(--dark-green);
+  background: var(--header-background);
   padding: 2rem 0 12rem;
   text-align: center;
 }
 
 #logo {
-  color: #fff;
+  color: var(--white);
   font-weight: 100;
 }
 
@@ -126,19 +170,18 @@ header {
 }
 
 #balance h2 {
-  color: white;
+  color: var(--white);
   margin-top: 0;
 }
 
 /* Cards */
 
 .card {
-  background: white;
+  background: var(--white);
   padding: 1.5rem 2rem;
   border-radius: 0.5rem;
 
   margin-bottom: 2rem;
-
 }
 
 .card h3 {
@@ -148,7 +191,7 @@ header {
 
   font-weight: normal;
   font-size: 1rem;
-  color: var(--color-darkblue);
+  color: var(--font-color);
 }
 
 .card p {
@@ -157,16 +200,16 @@ header {
 }
 
 .card #expenseDisplay {
-  color: var(--red)
+  color: var(--red);
 }
 
 .card #incomeDisplay {
-  color: var(--green)
+  color: var(--green);
 }
 
 .card.green {
   background: var(--green);
-  color: white;
+  color: var(--white);
 }
 
 .new-date {
@@ -176,31 +219,18 @@ header {
   margin-bottom: 20px;
 }
 
-.actualDate {
-  border: none;
-  border-radius: 0.8rem;
-  outline: none;
-
-  padding: 0.8rem;
-  width: auto;
-
-  font-family: Poppins;
-  font-size: 1rem;
-  color: #969cb3;
-}
-
-.actualDate:hover {
-  color: var(--color-darkblue);
-  cursor: pointer;
-  opacity: 1;
-}
-
 /* Table */
+
+#transaction {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
 
 #data-table {
   width: 100%;
   border-spacing: 0 0.5rem;
-  color: #969cb3;
+  color: var(--font-color);
 }
 
 table thead tr th:first-child,
@@ -213,7 +243,7 @@ table tbody tr td:last-child {
 }
 
 table thead th {
-  background: white;
+  background: var(--white);
 
   font-weight: normal;
   padding: 1rem 2rem;
@@ -230,7 +260,7 @@ table tbody tr:hover {
 }
 
 table tbody td {
-  background: white;
+  background: var(--white);
 
   padding: 1rem 2rem;
   font-weight: normal;
@@ -239,11 +269,11 @@ table tbody td {
 }
 
 td.description {
-  color: var(--color-darkblue);
+  color: var(--font-color);
 }
 
 td.income {
-  color: #12a454;
+  color: var(--green);
 }
 
 td.expense {
@@ -276,7 +306,7 @@ td.expense {
 }
 
 .modal {
-  background: #f0f2f5;
+  background: var(--background);
   padding: 2.4rem;
 }
 
@@ -298,7 +328,7 @@ input {
   width: 100%;
 
   opacity: 0.7;
-  color: var(--color-darkblue);
+  color: var(--light-black);
 
   outline-color: var(--green);
 }
@@ -313,11 +343,12 @@ input {
 
 .input-group small {
   opacity: 0.4;
+  color: var(--light-black);
 }
 
 .input-group #date {
   opacity: 0.7;
-  color: var(--color-darkblue);
+  color: var(--light-black);
 }
 
 .input-group #date:hover {
@@ -340,7 +371,7 @@ input {
 footer {
   text-align: center;
   padding: 4rem 0 2rem;
-  color: var(--color-darkblue);
+  color: var(--font-color);
   opacity: 0.6;
 }
 
@@ -355,5 +386,18 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #363636;
+    --header-background: #121212;
+    --font-color: #f0f2f5;
+    --green: #49aa26;
+    --light-green: #555;
+    --red: #e92929;
+    --white: #1f1b24;
+    --light-black: #333;
   }
 }
