@@ -1,10 +1,3 @@
-const switchThemeButton = document.querySelector(".checkbox");
-const imgGit = document.querySelector(".github-icon");
-
-
-switchThemeButton.addEventListener("click", event => {
-  ThemeManager.switchTheme()
-})
 
 const ThemeManager = {
   switchTheme() {
@@ -21,7 +14,8 @@ const ThemeManager = {
 
   },
 
-  themeDetector() {
+  initTheme() {
+
     let COLOR_THEME = window.matchMedia("(prefers-color-scheme: light)").matches ? 'light' : 'dark';
 
     if (COLOR_THEME === "dark") {
@@ -258,7 +252,7 @@ const App = {
 
     Storage.set(Transaction.all)
 
-    ThemeManager.themeDetector()
+    ThemeManager.initTheme()
 
   },
 
@@ -268,4 +262,13 @@ const App = {
   }
 }
 
+const switchThemeButton = document.querySelector(".checkbox");
+const imgGit = document.querySelector(".github-icon");
+
+
+switchThemeButton.addEventListener("click", event => {
+  ThemeManager.switchTheme()
+})
+
 App.init()
+
