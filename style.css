@@ -355,7 +355,7 @@ input {
 
 .input-group small {
   opacity: 0.4;
-  color: var(--light-black);
+  color: var(--font-color);
 }
 
 .input-group #date {
