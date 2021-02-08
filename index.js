@@ -1,47 +1,39 @@
 const switchThemeButton = document.querySelector(".checkbox");
 const imgGit = document.querySelector(".github-icon");
 
+
 switchThemeButton.addEventListener("click", event => {
-  switchTheme()
+  ThemeManager.switchTheme()
 })
 
-let COLOR_THEME = window.matchMedia("(prefers-color-scheme: light)").matches ? 'light' : 'dark';
+const ThemeManager = {
+  switchTheme() {
 
-if (COLOR_THEME === "dark") {
-  switchThemeButton.checked = true
-  imgGit.src = "assets/GitHub-Mark/GitHub-Mark-Light-32px.png"
-} else {
-  switchThemeButton.checked = false
-  imgGit.src = "assets/GitHub-Mark/GitHub-Mark-32px.png"
-}
+    let COLOR_THEME = switchThemeButton.checked ? 'dark' : 'light';
 
-function switchTheme() {
-  let currentTheme = COLOR_THEME
-
-  COLOR_THEME = currentTheme === 'light' ? 'dark' : 'light'
-
-  if (currentTheme === "dark") {
-    imgGit.src = "assets/GitHub-Mark/GitHub-Mark-32px.png"
-  } else {
-    imgGit.src = "assets/GitHub-Mark/GitHub-Mark-Light-32px.png"
-  }
-
-  const rules = window.document.styleSheets[0].cssRules
-
-  for (i = 0; i < rules.length; i++) {
-    media = rules[i].media
-
-    if (media == undefined) {
-      continue
+    if (COLOR_THEME === 'dark') {
+      document.querySelector("body").classList.add('dark');
+      imgGit.src = "assets/GitHub-Mark/GitHub-Mark-Light-32px.png"
+    } else {
+      document.querySelector("body").classList.remove('dark')
+      imgGit.src = "assets/GitHub-Mark/GitHub-Mark-32px.png"
     }
 
-    let item = media
-      .mediaText
-      .replace(
-        "(prefers-color-scheme: " + currentTheme + ")",
-        "(prefers-color-scheme: " + COLOR_THEME + ")"
-      )
-    media.mediaText = item
+  },
+
+  themeDetector() {
+    let COLOR_THEME = window.matchMedia("(prefers-color-scheme: light)").matches ? 'light' : 'dark';
+
+    if (COLOR_THEME === "dark") {
+      document.querySelector("body").classList.add('dark');
+      switchThemeButton.checked = true
+      imgGit.src = "assets/GitHub-Mark/GitHub-Mark-Light-32px.png"
+    } else {
+      document.querySelector("body").classList.remove('dark')
+      switchThemeButton.checked = false
+      imgGit.src = "assets/GitHub-Mark/GitHub-Mark-32px.png"
+    }
+    return COLOR_THEME
   }
 }
 
@@ -265,6 +257,8 @@ const App = {
     DOM.updateBalance()
 
     Storage.set(Transaction.all)
+
+    ThemeManager.themeDetector()
 
   },
 

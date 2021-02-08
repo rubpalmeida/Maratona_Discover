@@ -11,6 +11,17 @@
   --light-black: #333;
 }
 
+:root .dark {
+  --background: #363636;
+  --header-background: #121212;
+  --font-color: #f0f2f5;
+  --green: #49aa26;
+  --light-green: #555;
+  --red: #e92929;
+  --white: #1f1b24;
+  --light-black: #333;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -387,18 +398,5 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #363636;
-    --header-background: #121212;
-    --font-color: #f0f2f5;
-    --green: #49aa26;
-    --light-green: #555;
-    --red: #e92929;
-    --white: #1f1b24;
-    --light-black: #333;
   }
 }
