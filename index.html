@@ -6,12 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/Dollar.ico" type="image/x-icon">
 
   <title>dev.inance$</title>
-
 </head>
 
 <body>
@@ -20,12 +18,10 @@
     <label>
       <input class="checkbox" type="checkbox">
       <span class="check"></span>
-  </label>
+    </label>
   </header>
 
   <main class="container">
-
-
     <section id="balance">
       <h2 class="sr-only">Balanço</h2>
 
@@ -49,8 +45,11 @@
         <h3>
           <span>Total</span>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 1.33333V30.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M22.6667 6.66667H12.6667C11.429 6.66667 10.242 7.15834 9.36684 8.03351C8.49167 8.90868 8 10.0957 8 11.3333C8 12.571 8.49167 13.758 9.36684 14.6332C10.242 15.5083 11.429 16 12.6667 16H19.3333C20.571 16 21.758 16.4917 22.6332 17.3668C23.5083 18.242 24 19.429 24 20.6667C24 21.9043 23.5083 23.0913 22.6332 23.9665C21.758 24.8417 20.571 25.3333 19.3333 25.3333H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 1.33333V30.6667" stroke="black" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path
+              d="M22.6667 6.66667H12.6667C11.429 6.66667 10.242 7.15834 9.36684 8.03351C8.49167 8.90868 8 10.0957 8 11.3333C8 12.571 8.49167 13.758 9.36684 14.6332C10.242 15.5083 11.429 16 12.6667 16H19.3333C20.571 16 21.758 16.4917 22.6332 17.3668C23.5083 18.242 24 19.429 24 20.6667C24 21.9043 23.5083 23.0913 22.6332 23.9665C21.758 24.8417 20.571 25.3333 19.3333 25.3333H8"
+              stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </h3>
         <p id="totalDisplay">R$ 0,00</p>
@@ -59,7 +58,7 @@
 
     <section id="transaction">
       <h2 class="sr-only">Transações</h2>
-        <a href="#" onclick="Modal.toggle()" class="button new">+ Nova Transação</a>
+      <a href="#" onclick="Modal.toggle()" class="button new">+ Nova Transação</a>
 
       <table id="data-table">
         <thead>
@@ -91,12 +90,10 @@
             <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas
               decimais</small>
           </div>
-
           <div class="input-group">
             <label class="sr-only" for="date">Data</label>
             <input type="date" id="date" name="date" placeholder="Data" />
           </div>
-
           <div class="input-group actions">
             <a href="#" onclick="Form.clearFields(), Modal.toggle()" class="button cancel">Cancelar</a>
             <button class="button save" type="submit">Salvar</button>
@@ -111,8 +108,11 @@
       <a href="https://github.com/rubpalmeida/Maratona_Discover" target="_blank">
         <img class="github-icon" src="" alt="" srcset="">
       </a>
+      <a href="https://linkedin.com/in/rubpalmeida" target="_blank">
+        <img class="linkedin-icon" src="" alt="">
+      </a>
     </span>
-    <p>dev.finance$ - By Rubens Almeida</p>
+    <p>2021 - dev.finance$ - By Rubens Almeida</p>
   </footer>
 
   <script src="index.js"></script>

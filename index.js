@@ -6,10 +6,12 @@ const ThemeManager = {
 
     if (COLOR_THEME === 'dark') {
       document.querySelector("body").classList.add('dark');
-      imgGit.src = "assets/GitHub-Mark/GitHub-Mark-Light-32px.png"
+      imgGit.src = "assets/Social/GitHub-Mark-Light-32px.png"
+      imgLkin.src = "assets/Social/linkedin-32px-light.png"
     } else {
       document.querySelector("body").classList.remove('dark')
-      imgGit.src = "assets/GitHub-Mark/GitHub-Mark-32px.png"
+      imgGit.src = "assets/Social/GitHub-Mark-32px.png"
+      imgLkin.src = "assets/Social/linkedin-32px.png"
     }
 
   },
@@ -21,11 +23,13 @@ const ThemeManager = {
     if (COLOR_THEME === "dark") {
       document.querySelector("body").classList.add('dark');
       switchThemeButton.checked = true
-      imgGit.src = "assets/GitHub-Mark/GitHub-Mark-Light-32px.png"
+      imgGit.src = "assets/Social/GitHub-Mark-Light-32px.png"
+      imgLkin.src = "assets/Social/linkedin-32px-light.png"
     } else {
       document.querySelector("body").classList.remove('dark')
       switchThemeButton.checked = false
-      imgGit.src = "assets/GitHub-Mark/GitHub-Mark-32px.png"
+      imgGit.src = "assets/Social/GitHub-Mark-32px.png"
+      imgLkin.src = "assets/Social/linkedin-32px.png"
     }
     return COLOR_THEME
   }
@@ -67,7 +71,7 @@ const Transaction = {
     let income = 0
 
     Transaction.all.forEach(transaction => {
-      if (transaction.amount > 0) {
+      if (transaction.amount >= 0) {
         income += transaction.amount
       }
     })
@@ -103,7 +107,7 @@ const DOM = {
   },
 
   innerHTMLTransaction(transaction, index) {
-    const CSSClass = transaction.amount > 0 ? "income" : "expense"
+    const CSSClass = transaction.amount >= 0 ? "income" : "expense"
 
     const amount = Utils.formatCurrency(transaction.amount)
 
@@ -264,6 +268,7 @@ const App = {
 
 const switchThemeButton = document.querySelector(".checkbox");
 const imgGit = document.querySelector(".github-icon");
+const imgLkin = document.querySelector(".linkedin-icon");
 
 
 switchThemeButton.addEventListener("click", event => {
