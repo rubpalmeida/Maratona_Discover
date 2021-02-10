@@ -7,7 +7,7 @@ const ThemeManager = {
     if (COLOR_THEME === 'dark') {
       document.querySelector("body").classList.add('dark');
       imgGit.src = "assets/Social/GitHub-Mark-Light-32px.png"
-      imgLkin.src = "assets/Social/linkedin-32px-light.png"
+      imgLkin.src = "assets/Social/linkedin-32px-Light.png"
     } else {
       document.querySelector("body").classList.remove('dark')
       imgGit.src = "assets/Social/GitHub-Mark-32px.png"
@@ -24,7 +24,7 @@ const ThemeManager = {
       document.querySelector("body").classList.add('dark');
       switchThemeButton.checked = true
       imgGit.src = "assets/Social/GitHub-Mark-Light-32px.png"
-      imgLkin.src = "assets/Social/linkedin-32px-light.png"
+      imgLkin.src = "assets/Social/linkedin-32px-Light.png"
     } else {
       document.querySelector("body").classList.remove('dark')
       switchThemeButton.checked = false
