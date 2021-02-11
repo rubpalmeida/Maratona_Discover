@@ -148,6 +148,7 @@ button:hover {
   color: var(--red);
   border: 2px solid var(--red);
   border-radius: 0.5rem;
+  outline: none;
 
   height: 50px;
 
