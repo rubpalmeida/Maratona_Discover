@@ -256,7 +256,6 @@ const App = {
 
     Storage.set(Transaction.all)
 
-    ThemeManager.initTheme()
 
   },
 
@@ -274,6 +273,8 @@ const imgLkin = document.querySelector(".linkedin-icon");
 switchThemeButton.addEventListener("click", event => {
   ThemeManager.switchTheme()
 })
+
+ThemeManager.initTheme()
 
 App.init()
 
