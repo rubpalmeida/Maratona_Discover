@@ -23,10 +23,10 @@
 <hr>
 
 <div align="center">
-  <img src="./assets/Readme/Screen Shot 2021-02-15 at 19.13.50.png">
-  <img src="./assets/Readme/Screen Shot 2021-02-15 at 19.14.05.png">
-  <img src="./assets/Readme/Screen Shot 2021-02-15 at 19.14.22.png">
-  <img src="./assets/Readme/Screen Shot 2021-02-15 at 19.14.33.png">
+  <img src="./assets/Readme/Screen Shot 2021-02-15 at 19.13.50.png"/>
+  <img src="./assets/Readme/Screen Shot 2021-02-15 at 19.14.05.png"/>
+  <img src="./assets/Readme/Screen Shot 2021-02-15 at 19.14.22.png"/>
+  <img src="./assets/Readme/Screen Shot 2021-02-15 at 19.14.33.png"/>
 </div>
 
 <p>The dev.finance$ is an application to finance control, where is possible to create and delete transactions and see the total amount. It shall be used to control the expenses and incomes and verify the balance. It was used the LocalStorage to storage the application data.</p>
